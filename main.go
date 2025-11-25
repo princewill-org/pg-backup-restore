@@ -154,6 +154,7 @@ func promptConfig() (Config, error) {
 		return config, fmt.Errorf("prompt failed for password: %v", err)
 	}
 	config.password = password
+	secret_name_to_check = sys.argv[1]
 
 	// Prompt for schema (optional)
 	prompt = promptui.Prompt{
